@@ -9,11 +9,11 @@ The initial Github version of AutoNFS v1.2.1 - as is - running quite well and st
 The locations of the files are given through the folders in this Repository, so for example the autonfs.sh should reside in /usr/local/bin folder in your NFS-Client
 
 1. Place a copy of the autonfs.sh (actual script) in the desired folder
-..- Modify the file by setting the correct `NFSSERVER` and `MOUNTS` vars and optionally `NFSVERS`, `MOUNTOPT` and `INTERVAL`
+  - Modify the file by setting the correct `NFSSERVER` and `MOUNTS` vars and optionally `NFSVERS`, `MOUNTOPT` and `INTERVAL`
 2. Place a copy of the autonfs (LSB init script) file in the desired folder
-..- Make both executable with `chmod +x /<path to the files>`
+  - Make both executable with `chmod +x /<path to the files>`
 3. Install the init script for bootup with `update-rc.d autonfs defaults`
-4. Start AutoNFS with `service autonfs start` - the mounted folders will magically appear
+4. Start AutoNFS with `service autonfs start` ... the mounted folders will magically appear
 
 AutoNFS will now completly take care of those mounts by checking the NFS Server regularily (`INTERVAL`) if its up or down. If its down, it will unmount the shares after 2 check-failures and will auto-remount them as soon as the server is back up. In that case it will also write it to the syslog.
 
