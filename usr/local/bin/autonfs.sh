@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# AutoNFS v1.2.1
+# AutoNFS v1.2.2
 
 # (c) 2012/2013 by Martin Seener (martin@seener.de)
 # Licensed under the GPLv2
@@ -10,20 +10,6 @@
 
 # Hints:
 #   - only limited logging is active; for debug logging, uncomment all "logger" lines
-
-# Changelog:
-#   v1.0:
-#     - initial version
-#   v1.1:
-#     - added NFSVERS parameter which prevents the server from writing
-#       "unkown version" warnings into syslog for each call
-#   v1.2 (2013-04-10):
-#     - improved NFS Server check (double checks its N/A before unmounting)
-#       - sometimes the first check is a false positive, therefore doing two
-#     - improved debug syslogging (added tag and more useful information)
-#     - added some more inline comments for explanation
-#   v1.2.1 (2013-04-12)
-#     - logging is only done when something is not working in first place (limited logging)
 
 # The hostname or IP-address of the fileserver:
 FILESERVER="nfsserver.example.com"
