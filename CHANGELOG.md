@@ -5,7 +5,7 @@ The Code can be found at [https://github.com/martinseener/autonfs](https://githu
 
 ## v1.3
 - Fixed small typo in CHANGELOG.md
-- Changed autonfs.sh and autonfs init script from #!/bin/bash to #!/usr/bin/env bash for portability purposes
+- Changed autonfs.sh and autonfs init script from #!/bin/bash|#!/bin/sh to #!/usr/bin/env bash|#!/usr/bin/env sh for portability purposes
 - AutoNFS now uses a separate configuration file at /etc/default/autonfs for easier maintenance (autonfs.sh location is now completely user configurable)
 
 ### v1.2.2
