@@ -3,7 +3,12 @@
 AutoNFS is a client-side autofs-free NFS Share Automount-Script, initially designed for Debian Squeeze or derivates.
 The Code can be found at [https://github.com/martinseener/autonfs](https://github.com/martinseener/autonfs)
 
-### v.1.2.2
+## v1.3
+- Fixed small typo in CHANGELOG.md
+- Changed autonfs.sh and autonfs init script from #!/bin/bash to #!/usr/bin/env bash for portability purposes
+- AutoNFS now uses a separate configuration file at /etc/default/autonfs for easier maintenance (autonfs.sh location is now completely user configurable)
+
+### v1.2.2
 - Moved Changelog from inline comments to separate markdown file
 
 ### v1.2.1

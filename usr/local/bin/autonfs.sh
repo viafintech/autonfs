@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-# AutoNFS v1.2.2
+# AutoNFS v1.3
 
 # (c) 2012/2013 by Martin Seener (martin@seener.de)
 # Licensed under the GPLv2
@@ -11,16 +11,13 @@
 # Hints:
 #   - only limited logging is active; for debug logging, uncomment all "logger" lines
 
-# The hostname or IP-address of the fileserver:
-FILESERVER="nfsserver.example.com"
-# The NFS Version to be checked (must given to prevent "unknown version" syslog warnings)
-NFSVERS=3
-# Mount Options (see mount man pages for info)
-MOUNTOPT="-o rw,hard,intr,tcp,actimeo=3"
-# Check every X seconds (60 is a good default):
-INTERVAL=60
-# The shares that need to be mounted:
-MOUNTS=( "/mnt/share" )
+# Load the configuration file
+if [ -f "/etc/default/autonfs" ]; then
+  . /etc/default/autonfs
+else
+  logger -t autonfs "Cannot find configuration file. Exiting."
+  exit 3
+fi
 
 # Write PID to a PIDFILE for later process kill
 # The init script handles the kill process and if there`s already a process running

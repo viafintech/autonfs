@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 ### BEGIN INIT INFO
 # Provides:          autonfs
 # Required-Start:    $network $named $portmap $remote_fs
@@ -9,6 +9,14 @@
 # Description:       starts, stops or restarts the autonfs script which handles the nfs mounts
 ### END INIT INFO
 # Author: Martin Seener <martin@seener>
+
+# Load configuration
+if [ -f "/etc/default/autonfs" ]; then
+  . /etc/default/autonfs
+else
+  echo "Cannot find configuration file. Exiting."
+  exit 3
+fi
 
 # Actions
 case "$1" in
@@ -29,7 +37,7 @@ case "$1" in
 			fi
 		else
 			# No .pid - we`re starting AutoNFS.
-			/bin/bash /usr/local/bin/autonfs.sh &
+			/bin/bash $SCRIPTPATH &
 			echo "done."
 			exit 0
 		fi
@@ -68,7 +76,7 @@ case "$1" in
 				kill -9 `cat /var/run/autonfs.pid`
 				rm -f /var/run/autonfs.pid
 				echo -n "stopped ..."
-				/bin/bash /usr/local/bin/autonfs.sh &
+				/bin/bash $SCRIPTPATH &
 				echo "started."
 				exit 0
 			else
@@ -79,7 +87,7 @@ case "$1" in
 		else
 			# No .pid found. Starting AutoNFS
 			echo -n "Nothing to stop. Starting AutoNFS: "
-			/bin/bash /usr/local/bin/autonfs.sh &
+			/bin/bash $SCRIPTPATH &
 			echo "started."
 			exit 0
 		fi

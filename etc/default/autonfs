@@ -1,0 +1,37 @@
+# AutoNFS Configuration
+
+# (c) 2012/2013 by Martin Seener (martin@seener.de)
+# Licensed under the GPLv2
+
+# The path to the AutoNFS script location
+# Default: /usr/local/bin/autonfs.sh
+SCRIPTPATH="/usr/local/bin/autonfs.sh"
+
+# The hostname or IP address of the NFS Server
+# Can be an resolvable DNS Name like "nfsserver.example.com"
+# or an IP like "10.10.10.2"
+FILESERVER="nfsserver.example.com"
+
+# The NFS protocol version used for the server checks
+# Using a specific nfs protocol version prevents "unknown version" syslog
+# entries caused by rpcinfo with every check call
+# Default: 3 (can be 2, 3 or 4)
+NFSVERS=3
+
+# Define some mount options which should be used for (re-)mounting the NFS shares
+# Default: "-o rw,hard,intr,tcp,actimeo=3"
+# Explanation:
+#   rw   - mount read/write
+#   hard - 
+MOUNTOPT="-o rw,hard,intr,tcp,actimeo=3"
+
+# Server Check interval (in seconds)
+# Default: 60 seconds
+INTERVAL=60
+
+# The shares that need to be mounted defined as an array
+# Example with 2 shares: MOUNTS=( "/mnt/share" "/var/remoteShare2" )
+# Explanation: AutoNFS will try to mount both shares whereas the remote and
+# local mount point must have the same name.
+# Hint: In a next version AutoNFS will support different remote and local mountpoints
+MOUNTS=( "/mnt/share" )
