@@ -30,8 +30,9 @@ MOUNTOPT="-o rw,hard,intr,tcp,actimeo=3"
 INTERVAL=60
 
 # The shares that need to be mounted defined as an array
-# Example with 2 shares: MOUNTS=( "/mnt/share" "/var/remoteShare2" )
-# Explanation: AutoNFS will try to mount both shares whereas the remote and
-# local mount point must have the same name.
-# Hint: In a next version AutoNFS will support different remote and local mountpoints
+# Example with 2 shares: MOUNTS=( "/mnt/share" "/var/remoteShare2|/var/localShare2" )
+# Explanation: AutoNFS will try to mount both shares whereas in the second
+# mountpoint there are a different remote and local mountpoint which are divided by
+# the MOUNTSDELIMITER below. The default is the pipe.
 MOUNTS=( "/mnt/share" )
+MOUNTSDELIMITER="|"
