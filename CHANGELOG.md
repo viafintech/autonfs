@@ -8,6 +8,7 @@ The Code can be found at [https://github.com/martinseener/autonfs](https://githu
 - made autonfs SysVinit script conform with 2-space indentation ([fixes #5](https://github.com/martinseener/autonfs/issues/5))
 - Changed AutoNFS main script shabang to bash since we use this in the script as well (may be changed later to sh)
 - Added functionality to have different remote and local mountpoints ([fixes #1](https://github.com/martinseener/autonfs/issues/1))
+- Created OS subfolders to have the right init/upstart scripts for the right distribution where you can use AutoNFS (currently SysVinit and Upstart)
 
 ## v1.3
 - Fixed small typo in CHANGELOG.md
