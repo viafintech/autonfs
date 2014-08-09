@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 ### BEGIN INIT INFO
 # Provides:          autonfs
 # Required-Start:    $network $named $portmap $remote_fs
@@ -20,96 +20,96 @@ fi
 
 # Actions
 case "$1" in
-	start)
-		# Check for a .pid file, otherwise run that sh..cript
-		echo -n "Starting AutoNFS: "
-		if [ -f "/var/run/autonfs.pid" ]; then
-			# .pid exists. Now we check if the process is dead
-			/bin/ps aux | grep "`cat /var/run/autonfs.pid`" | grep -v grep > /dev/null 2>&1
-			if [ $? -eq 0 ]; then
-				# Process is running… Aborting.
-				echo "AutoNFS is still running. Aborting."
-				exit 0
-			else
-				# Process is dead… Aborting.
-				echo "/var/run/autonfs.pid exists. Process not running. Aborting."
-				exit 1
-			fi
-		else
-			# No .pid - we`re starting AutoNFS.
-			/bin/bash $SCRIPTPATH &
-			echo "done."
-			exit 0
-		fi
-		;;
-	stop)
-		# Stopping AutoNFS if its running
-		echo -n "Stopping AutoNFS: "
-		if [ -f "/var/run/autonfs.pid" ]; then
-			# .pid is in place. checking if process is there
-			/bin/ps aux | grep "`cat /var/run/autonfs.pid`" | grep -v grep > /dev/null 2>&1
-			if [ $? -eq 0 ]; then
-				# Process is there too. Let us stop it
-				kill -9 `cat /var/run/autonfs.pid`
-				rm -f /var/run/autonfs.pid
-				echo "done."
-				exit 0
-			else
-				# No Process found
-				echo "Nothing to stop. Please delete old /var/run/autonfs.pid."
-				exit 1
-			fi
-		else
-			# No .pid found. Nothing to stop
-			echo "Nothing to stop."
-			exit 3
-		fi
-		;;
-	restart)
-		# Restarting AutoNFS
-		echo -n "Restarting AutoNFS: ..."
-		if [ -f "/var/run/autonfs.pid" ]; then
-			# .pid is in place. checking if process is there
-			/bin/ps aux | grep "`cat /var/run/autonfs.pid`" | grep -v grep > /dev/null 2>&1
-			if [ $? -eq 0 ]; then
-				# Process is there too. Let us stop it
-				kill -9 `cat /var/run/autonfs.pid`
-				rm -f /var/run/autonfs.pid
-				echo -n "stopped ..."
-				/bin/bash $SCRIPTPATH &
-				echo "started."
-				exit 0
-			else
-				# No Process found
-				echo "Nothing to restart. Please delete old /var/run/autonfs.pid."
-				exit 1
-			fi
-		else
-			# No .pid found. Starting AutoNFS
-			echo -n "Nothing to stop. Starting AutoNFS: "
-			/bin/bash $SCRIPTPATH &
-			echo "started."
-			exit 0
-		fi
-		;;
-	status)
-		# Getting the status of AutoNFS
-		echo -n "AutoNFS is "
-		if [ -f "/var/run/autonfs.pid" ]; then
-			# .pid is in place. checking if process is there
-			/bin/ps aux | grep "`cat /var/run/autonfs.pid`" | grep -v grep > /dev/null 2>&1
-			if [ $? -eq 0 ]; then
-				echo "running. PID File in place."
-				exit 0
-			else
-				echo "not running. PID File in place."
-				exit 1
-			fi
-		else
-			echo "not running."
-			exit 3
-		fi
-		;;
+  start)
+    # Check for a .pid file, otherwise run that sh..cript
+    echo -n "Starting AutoNFS: "
+    if [ -f "/var/run/autonfs.pid" ]; then
+      # .pid exists. Now we check if the process is dead
+      /bin/ps aux | grep "`cat /var/run/autonfs.pid`" | grep -v grep > /dev/null 2>&1
+      if [ $? -eq 0 ]; then
+        # Process is running… Aborting.
+        echo "AutoNFS is still running. Aborting."
+        exit 0
+      else
+        # Process is dead… Aborting.
+        echo "/var/run/autonfs.pid exists. Process not running. Aborting."
+        exit 1
+      fi
+    else
+      # No .pid - we`re starting AutoNFS.
+      /bin/bash $SCRIPTPATH &
+      echo "done."
+      exit 0
+    fi
+    ;;
+  stop)
+    # Stopping AutoNFS if its running
+    echo -n "Stopping AutoNFS: "
+    if [ -f "/var/run/autonfs.pid" ]; then
+      # .pid is in place. checking if process is there
+      /bin/ps aux | grep "`cat /var/run/autonfs.pid`" | grep -v grep > /dev/null 2>&1
+      if [ $? -eq 0 ]; then
+        # Process is there too. Let us stop it
+        kill -9 `cat /var/run/autonfs.pid`
+        rm -f /var/run/autonfs.pid
+        echo "done."
+        exit 0
+      else
+        # No Process found
+        echo "Nothing to stop. Please delete old /var/run/autonfs.pid."
+        exit 1
+      fi
+    else
+      # No .pid found. Nothing to stop
+      echo "Nothing to stop."
+      exit 3
+    fi
+    ;;
+  restart)
+    # Restarting AutoNFS
+    echo -n "Restarting AutoNFS: ..."
+    if [ -f "/var/run/autonfs.pid" ]; then
+      # .pid is in place. checking if process is there
+      /bin/ps aux | grep "`cat /var/run/autonfs.pid`" | grep -v grep > /dev/null 2>&1
+      if [ $? -eq 0 ]; then
+        # Process is there too. Let us stop it
+        kill -9 `cat /var/run/autonfs.pid`
+        rm -f /var/run/autonfs.pid
+        echo -n "stopped ..."
+        /bin/bash $SCRIPTPATH &
+        echo "started."
+        exit 0
+      else
+        # No Process found
+        echo "Nothing to restart. Please delete old /var/run/autonfs.pid."
+        exit 1
+      fi
+    else
+      # No .pid found. Starting AutoNFS
+      echo -n "Nothing to stop. Starting AutoNFS: "
+      /bin/bash $SCRIPTPATH &
+      echo "started."
+      exit 0
+    fi
+    ;;
+  status)
+    # Getting the status of AutoNFS
+    echo -n "AutoNFS is "
+    if [ -f "/var/run/autonfs.pid" ]; then
+      # .pid is in place. checking if process is there
+      /bin/ps aux | grep "`cat /var/run/autonfs.pid`" | grep -v grep > /dev/null 2>&1
+      if [ $? -eq 0 ]; then
+        echo "running. PID File in place."
+        exit 0
+      else
+        echo "not running. PID File in place."
+        exit 1
+      fi
+    else
+      echo "not running."
+      exit 3
+    fi
+    ;;
 esac
 # Close Script
 exit 0

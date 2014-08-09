@@ -1,12 +1,11 @@
 #!/usr/bin/env bash
 
-# AutoNFS v1.3
+# AutoNFS v1.4
 
-# (c) 2012/2013 by Martin Seener (martin@seener.de)
+# (c) 2012-2014 by Martin Seener (martin@seener.de)
 # Licensed under the GPLv2
 
 # Code can be found at github.com/martinseener/autonfs
-# Original Idea from JeroenHoek at http://ubuntuforums.org/showthread.php?t=1389291
 
 # Hints:
 #   - only limited logging is active; for debug logging, uncomment all "logger" lines

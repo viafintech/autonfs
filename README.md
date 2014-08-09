@@ -29,14 +29,9 @@ You can also uncomment all lines starting with `#logger` to get a more verbose s
 - `INTERVAL` - How often should AutoNFS check the Server? (60seconds is a good default but we use 15seconds for our HA Environment)
 - `MOUNTS` - This is a space-separated list of shares to mount for ex. `MOUNTS=( "/share1" "/share2" )`, whereas the share name and mountpath must be the same in this version. In a later version i will also support different shares and mount-paths
 
-## Roadmap
-
-- [ ] Support for different share-names and mount-paths
-- [x] Make the init-script more flexible and portable (different autonfs.sh locations for ex. by using a /etc/default/autonfs file) Issue #2 and #3
-- [ ] ...(Ideas?)
-
 ## Copyright and License
 
-This little tool was made by Martin Seener (c) 2012, 2013 with the initial idea from JeroenHoek at http://ubuntuforums.org/showthread.php?t=1389291 or https://github.com/jdhoek
+This little tool was made by Martin Seener (c) 2012-2014
+Feel free to contribute! Use feature branches for new stuff or bugfixes before you submit them to me! And please sign-off your commits!
 
 Released under the GNU GPLv2
