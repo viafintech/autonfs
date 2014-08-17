@@ -7,6 +7,11 @@
 # Default: /usr/local/bin/autonfs.sh
 SCRIPTPATH="/usr/local/bin/autonfs.sh"
 
+# Set the log level
+# LOGLEVEL=2 debug, LOGLEVEL=1 normal logging, LOGLEVEL=0 disabled
+# Default: 1
+LOGLEVEL=1
+
 # The hostname or IP address of the NFS Server
 # Can be an resolvable DNS Name like "nfsserver.example.com"
 # or an IP like "10.10.10.2"

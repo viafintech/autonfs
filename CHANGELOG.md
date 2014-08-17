@@ -3,8 +3,11 @@
 AutoNFS is a client-side autofs-free NFS Share Automount-Script, initially designed for Debian Squeeze or derivates.
 The Code can be found at [https://github.com/martinseener/autonfs](https://github.com/martinseener/autonfs)
 
+## v1.4.2
+- Added new logging system. You can disbale logging completly or switch up to debug logging. ([fixes #7](https://github.com/martinseener/autonfs/issues/7))
+
 ## v1.4.1
-- Renamed OS folders to Init-System names. So we support SysVinit (Debian), Upstart (Ubuntu) and the new Systemd (OpenSUSE) and their respective derivates ([fixed #6](https://github.com/martinseener/autonfs/issues/6))
+- Renamed OS folders to Init-System names. So we support SysVinit (Debian), Upstart (Ubuntu) and the new Systemd (OpenSUSE) and their respective derivates ([fixes #6](https://github.com/martinseener/autonfs/issues/6))
 
 ## v1.4
 - Removed Roadmap from README - we have Github for this

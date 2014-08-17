@@ -1,8 +1,11 @@
 # AutoNFS
 
-AutoNFS is a client-side autofs-free NFS Share Automount-Script, initially designed for Debian Squeeze or derivates.
+AutoNFS is a client-side autofs-free NFS Share Automount-Script, initially designed for Debian Squeeze or derivates it now also runs smoothly on systems that use SysVinit, Upstart or Systemd init-systems like Ubuntu, OpenSUSE or RHEL/CentOS.
 
-The initial Github version of AutoNFS v1.2.1 - as is - running quite well and stable in our production environment containing of about 20 NFS Shares and one NFS 3 Server - all with latest Debian Squeeze
+## Available versions
+
+If you want the latest stable version of AutoNFS you can easily stick with the master branch. If you want a specific version, checkout the respective branch.
+The latest stuff is always available on the Development branch.
 
 ## Installation and Usage
 
@@ -23,6 +26,7 @@ You can also uncomment all lines starting with `#logger` to get a more verbose s
 ## Variables explanation
 
 - `SCRIPTPATH` - The path to the AutoNFS executable (default: /usr/local/bin/autonfs.sh)
+- `LOGLEVEL` - Set the desired log level from 0 (disabled) trough 1 (normal logging) to 2 (debug logging)
 - `NFSSERVER` - The NFS Server you want to mount something from can be either a single IP or a DNS-Name
 - `NFSVERS` - Defines the NFS Protocol (2,3 or 4) to be used for checking the Server and is needed to prevent writing "unknown version" warnings in the syslog
 - `MOUNTOPT` - Here you can define the classic NFS Mount options like you would in the fstab (uses good defaults for most scenarios)
