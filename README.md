@@ -9,7 +9,7 @@ The initial Github version of AutoNFS v1.2.1 - as is - running quite well and st
 The locations of the files are given through the folders in this Repository, so for example the autonfs.sh should reside in /usr/local/bin folder in your NFS-Client but starting v1.3 it can differ if new location is correctly set in /etc/default/autonfs config file.
 
 1. Place a copy of the autonfs.sh (actual script) in the desired folder
-2. Place a copy of the autonfs init/upstart file in the desired folder (see your folder distribution)
+2. Place a copy of the autonfs init/upstart/systemd file in the desired folder (see your init-systems folder)
   - Make both executable with `chmod +x /<path to the files>`
 3. Place the /etc/default/autonfs file in the same path on your machine
   - Modify the file by setting the correct `NFSSERVER` and `MOUNTS` vars and optionally `NFSVERS`, `MOUNTOPT` and `INTERVAL` and set the correct location of the autonfs.sh script, if you have placed it differently from the default in step 1!

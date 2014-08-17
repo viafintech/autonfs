@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# AutoNFS v1.4
+# AutoNFS v1.4.1
 
 # (c) 2012-2014 by Martin Seener (martin@seener.de)
 # Licensed under the GPLv2

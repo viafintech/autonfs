@@ -1,0 +1,10 @@
+[Unit]
+Description=AutoNFS is a client-side autofs-free NFS Share Automount-Script
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/autonfs
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
