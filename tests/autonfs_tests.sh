@@ -9,6 +9,8 @@ testAutoNFSDefaultParameters() {
   # Load AutoNFS defaults for testing
   . etc/default/autonfs
 
+  echo "Executing 8 Asserts..."
+
   assertTrue 'Check default SCRIPTPATH' "[ '${SCRIPTPATH}' == '/usr/local/bin/autonfs.sh' ]"
   assertTrue 'Check valid LOGLEVEL values' "[ $LOGLEVEL -ge 0 -a $LOGLEVEL -le 2 ]"
   assertTrue 'Check that FILESERVER is not empty' "[[ -n $FILESERVER ]]"
