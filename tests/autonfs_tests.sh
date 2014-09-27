@@ -5,14 +5,9 @@
 # (c) 2012-2014 by Martin Seener (martin@seener.de)
 # Licensed under the GPLv2
 
-oneTimeSetUp() {
-  # Set HOMEDIR to the root of AutoNFS for all tests
-  HOMEDIR=$PWD/..
-}
-
 testAutoNFSDefaultParameters() {
   # Load AutoNFS defaults for testing
-  . $HOMEDIR/etc/default/autonfs
+  . etc/default/autonfs
 
   assertTrue 'Check default SCRIPTPATH' "[ '${SCRIPTPATH}' == '/usr/local/bin/autonfs.sh' ]"
   assertTrue 'Check valid LOGLEVEL values' "[ $LOGLEVEL -ge 0 -a $LOGLEVEL -le 2 ]"
@@ -24,4 +19,4 @@ testAutoNFSDefaultParameters() {
   assertTrue 'Check the default MOUNTSDELIMITER' "[ '${MOUNTSDELIMITER}' == '|' ]"
 }
 
-. src/shunit2
+. shunit2-2.1.6/src/shunit2
