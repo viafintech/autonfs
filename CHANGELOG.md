@@ -3,6 +3,10 @@
 AutoNFS is a client-side autofs-free NFS Share Automount-Script, initially designed for Debian Squeeze or derivates.
 The Code can be found at [https://github.com/martinseener/autonfs](https://github.com/martinseener/autonfs)
 
+## v1.4.3
+- Added first [shunit2](https://code.google.com/p/shunit2/) Unit tests for AutoNFS defaults file
+- Added Travis-CI for automated testing and for better code!
+
 ## v1.4.2
 - Added new logging system. You can disbale logging completely or switch up to debug logging. ([fixes #7](https://github.com/martinseener/autonfs/issues/7))
 
