@@ -24,4 +24,4 @@ testAutoNFSDefaultParameters() {
   assertTrue 'Check the default MOUNTSDELIMITER' "[ '${MOUNTSDELIMITER}' == '|' ]"
 }
 
-. shunit2
+. src/shunit2
