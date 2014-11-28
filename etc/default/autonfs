@@ -41,3 +41,13 @@ INTERVAL=60
 # the MOUNTSDELIMITER below. The default is the pipe.
 MOUNTS=( "/mnt/share" )
 MOUNTSDELIMITER="|"
+
+# Prerequisites:
+# AutoNFS needs some external tools to work properly
+# and they're defined in the following array. It's made user-editable
+# in case you want to modify it or change/remove dependencies.
+# CAUTION: Normally you don't have to change anything unless you know what you're doing!
+ANFSDEP[1]='rpcinfo'
+ANFSDEP[2]='mount'
+ANFSDEP[3]='umount'
+ANFSDEP[4]='sleep'

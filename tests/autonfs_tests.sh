@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# AutoNFS v1.4.3 Tests
+# AutoNFS v1.5-dev Tests
 
 # (c) 2012-2014 by Martin Seener (martin@seener.de)
 # Licensed under the GPLv2
