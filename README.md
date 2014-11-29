@@ -2,8 +2,9 @@
 
 AutoNFS is a client-side autofs-free NFS Share Automount-Script, initially designed for Debian Squeeze or derivates it now also runs smoothly on systems that use SysVinit, Upstart or Systemd init-systems like Ubuntu, OpenSUSE or RHEL/CentOS.
 
-##### Status
-[![Build Status](https://travis-ci.org/martinseener/autonfs.svg)](https://travis-ci.org/martinseener/autonfs)
+#### Status
+- *Master-Branch*: [![Build Status](https://travis-ci.org/martinseener/autonfs.svg?branch=master)](https://travis-ci.org/martinseener/autonfs)
+- *Development-Branch*: [![Build Status](https://travis-ci.org/martinseener/autonfs.svg?branch=development)](https://travis-ci.org/martinseener/autonfs)
 
 ## Available versions
 
