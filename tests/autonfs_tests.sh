@@ -2,8 +2,8 @@
 
 # AutoNFS v1.4.3 Tests
 
-# (c) 2012-2014 by Martin Seener (martin@seener.de)
-# Licensed under the GPLv2
+# (c) 2012-2015 by Martin Seener (martin.seener@barzahlen.de)
+# Licensed under the MIT License
 
 testAutoNFSDefaultParameters() {
   # Load AutoNFS defaults for testing
