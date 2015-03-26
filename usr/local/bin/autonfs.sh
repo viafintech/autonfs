@@ -5,8 +5,6 @@
 # (c) 2012-2015 by Martin Seener (martin.seener@barzahlen.de)
 # Licensed under the MIT License
 
-# Code can be found at github.com/martinseener/autonfs
-
 # Load the configuration file
 if [ -f "/etc/default/autonfs" ]; then
   . /etc/default/autonfs

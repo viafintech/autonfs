@@ -4,23 +4,23 @@ AutoNFS is a client-side autofs-free NFS Share Automount-Script, initially desig
 The Code can be found at [https://github.com/Barzahlen/autonfs](https://github.com/Barzahlen/autonfs)
 
 ## v1.5-dev
-- Added a prerequisites check for tools AutoNFS needs for proper operation ([fixes #9](https://github.com/martinseener/autonfs/issues/9))
+- Added a prerequisites check for tools AutoNFS needs for proper operation ([fixes #9](https://github.com/Barzahlen/autonfs/issues/9))
 
 ## v1.4.3
 - Added first [shunit2](https://code.google.com/p/shunit2/) Unit tests for AutoNFS defaults file
 - Added Travis-CI for automated testing and for better code!
 
 ## v1.4.2
-- Added new logging system. You can disbale logging completely or switch up to debug logging. ([fixes #7](https://github.com/martinseener/autonfs/issues/7))
+- Added new logging system. You can disbale logging completely or switch up to debug logging. ([fixes #7](https://github.com/Barzahlen/autonfs/issues/7))
 
 ## v1.4.1
-- Renamed OS folders to Init-System names. So we support SysVinit (Debian), Upstart (Ubuntu) and the new Systemd (OpenSUSE) and their respective derivates ([fixes #6](https://github.com/martinseener/autonfs/issues/6))
+- Renamed OS folders to Init-System names. So we support SysVinit (Debian), Upstart (Ubuntu) and the new Systemd (OpenSUSE) and their respective derivates ([fixes #6](https://github.com/Barzahlen/autonfs/issues/6))
 
 ## v1.4
 - Removed Roadmap from README - we have Github for this
-- made autonfs SysVinit script conform with 2-space indentation ([fixes #5](https://github.com/martinseener/autonfs/issues/5))
+- made autonfs SysVinit script conform with 2-space indentation ([fixes #5](https://github.com/Barzahlen/autonfs/issues/5))
 - Changed AutoNFS main script shabang to bash since we use this in the script as well (may be changed later to sh)
-- Added functionality to have different remote and local mountpoints ([fixes #1](https://github.com/martinseener/autonfs/issues/1))
+- Added functionality to have different remote and local mountpoints ([fixes #1](https://github.com/Barzahlen/autonfs/issues/1))
 - Created OS subfolders to have the right init/upstart scripts for the right distribution where you can use AutoNFS (currently SysVinit and Upstart)
 
 ## v1.3
