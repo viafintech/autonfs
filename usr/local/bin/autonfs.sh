@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-# AutoNFS v1.5-dev
+# AutoNFS v1.5
 
-# (c) 2012-2015 by Martin Seener (martin.seener@barzahlen.de)
+# (c) 2012-2016 by Martin Seener (martin.seener@barzahlen.de)
 # Licensed under the MIT License
 
 # Load the configuration file

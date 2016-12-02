@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# AutoNFS v1.5-dev Tests
+# AutoNFS v1.5 Tests
 
-# (c) 2012-2015 by Martin Seener (martin.seener@barzahlen.de)
+# (c) 2012-2016 by Martin Seener (martin.seener@barzahlen.de)
 # Licensed under the MIT License
 
 testAutoNFSDefaultParameters() {
