@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-# AutoNFS v1.4.3
+# AutoNFS v1.5
 
-# (c) 2012-2015 by Martin Seener (martin.seener@barzahlen.de)
+# (c) 2012-2016 by Martin Seener (martin.seener@barzahlen.de)
 # Licensed under the MIT License
 
 # Load the configuration file
@@ -12,6 +12,24 @@ else
   if [ $LOGLEVEL -ge 1 ]; then logger -t autonfs "Cannot find configuration file. Exiting."; fi
   exit 3
 fi
+
+# Check the dependencies
+check_dependencies() {
+  param_array=$1[@]
+  work_array=("${!param_array}")
+
+  for CMD in ${work_array[@]}
+  do
+    type -p $CMD >/dev/null 2>&1
+    if [ $? -ne 0 ]; then
+      echo -e "\e[01;31mSorry, but > $CMD < cannot be found on this machine! Dependencies are not completly met.\e[00m"
+      logger -t autonfs "Sorry, but > $CMD < cannot be found on this machine! Dependencies are not completly met."
+      exit 1
+    fi
+  done
+}
+
+check_dependencies ANFSDEP
 
 # Write PID to a PIDFILE for later process kill
 # The init script handles the kill process and if there`s already a process running
