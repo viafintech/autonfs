@@ -39,7 +39,7 @@ You can also uncomment all lines starting with `#logger` to get a more verbose s
 
 ## Copyright and License
 
-This little tool was made by Martin Seener (c) 2012-2016
+This little tool was made by Martin Seener (c) 2012-2020 viafintech GmbH
 Feel free to contribute! Use feature branches in your forks for new stuff or bugfixes before you submit them to me! And please sign-off your commits!
 
 Released under the MIT License
