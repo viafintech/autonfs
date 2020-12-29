@@ -8,7 +8,7 @@
 # Short-Description: Start / Stop / Restart AutoNFS
 # Description:       starts, stops or restarts the autonfs script which handles the nfs mounts
 ### END INIT INFO
-# Author: Martin Seener <martin.seener@barzahlen.de>
+# Author: Martin Seener <martin.seener@viafintech.com>
 
 # Load configuration
 if [ -f "/etc/default/autonfs" ]; then

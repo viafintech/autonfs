@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-# AutoNFS v1.5
+# AutoNFS v1.5.1
 
-# (c) 2012-2016 by Martin Seener (martin.seener@barzahlen.de)
+# (c) 2012-2020 by viafintech GmbH
 # Licensed under the MIT License
 
 # Load the configuration file
